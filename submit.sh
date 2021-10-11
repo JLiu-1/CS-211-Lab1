@@ -7,7 +7,7 @@
 #SBATCH -n 1
 #SBATCH -c 4
 #SBATCH --mem=11000
-#SBATCH --time=8:0:0
+#SBATCH --time=1:0:0
 
 ##################################
 # DO NOT CHANGE CODES ABOVE THIS #
