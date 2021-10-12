@@ -104,5 +104,5 @@ void optimal(const double* A, const double* B, double *C, const int n, const int
     for(i=0;i<n;i++)
         for(j=0;j<n;j++)
             for(k=0;k<n;k++)
-                C[i][j]+=A[i][k]*B[k][j]
+                C[i*n+j]+=A[i*n+k]*B[k*n+j]
 }
