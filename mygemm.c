@@ -100,9 +100,5 @@ void bkji(const double *A, const double *B, double *C, const int n, const int b)
 //Cache Reuse part 4
 void optimal(const double* A, const double* B, double *C, const int n, const int b)
 {
-    int i,j,k;
-    for(i=0;i<n;i++)
-        for(j=0;j<n;j++)
-            for(k=0;k<n;k++)
-                C[i*n+j]+=A[i*n+k]*B[k*n+j];
+    
 }
