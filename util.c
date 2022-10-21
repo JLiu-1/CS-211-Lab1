@@ -36,7 +36,12 @@ int print_matrix(const double *A, const int m, const int n)
     if (i != m * n) return -1;
     return 0;
 }
-
+unsigned int get_usec()
+{
+	struct timeval time;
+	gettimeofday(&time, NULL);
+	return (1e6*time.tv_sec + time.tv_usec);
+}
 int randomize_matrix(double *A, const int m, const int n)
 {
 	srand(get_usec());
@@ -63,12 +68,7 @@ double get_sec()
 	return (time.tv_sec + 1e-6 * time.tv_usec);
 }
 
-unsigned int get_usec()
-{
-	struct timeval time;
-	gettimeofday(&time, NULL);
-	return (1e6*time.tv_sec + time.tv_usec);
-}
+
 
 
 int matrix_copy(double *C, const double *D, const int m, const int n)
